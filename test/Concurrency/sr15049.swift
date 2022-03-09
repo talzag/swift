@@ -16,5 +16,5 @@ func testAsyncSequence<Seq: AsyncSequence>(_ seq: Seq) async throws where Seq.El
 }
 
 func testAsyncSequence1<Seq: AsyncSequence>(_ seq: Seq) async throws where Seq.Element == Int {
-   async let _: Int = seq.reduce(0) { $0 + $1 } // OK
+   async let _ = seq.reduce(0) { $0 + $1 } // OK
 }
